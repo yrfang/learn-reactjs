@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import YTSearch from 'youtube-api-search';
+import _ from "lodash";
 
 import SearchBar from './components/search_bar';
 import VideoList from './components/video_list';
 import VideoDetail from './components/video_detail';
-
-import _ from "lodash";
 
 const API_KEY = 'AIzaSyBDiWzPNDBNVZJ5y8_cbZnrihaF255wAco';
 
@@ -25,7 +24,7 @@ class App extends Component {
   videoSearch(term) {
     YTSearch({key: API_KEY, term: term}, (videos) => {
       this.setState({
-        videos,
+        videos: videos,
         selectedVideo: videos[0],
       });
       //its the syntax in ES6
