@@ -6,6 +6,8 @@ import SearchBar from './components/search_bar';
 import VideoList from './components/video_list';
 import VideoDetail from './components/video_detail';
 
+import _ from "lodash";
+
 const API_KEY = 'AIzaSyBDiWzPNDBNVZJ5y8_cbZnrihaF255wAco';
 
 class App extends Component {
@@ -32,6 +34,10 @@ class App extends Component {
   }
 
   render() {
+    const videoSearch = _.debounce((term) => {
+      this.videoSearch(term);
+    }, 300);
+
     return (
       <div>
         <SearchBar onSearchTermChange={term => this.videoSearch(term)} />
