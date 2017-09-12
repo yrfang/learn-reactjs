@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 export default class BookDetail extends Component {
   render() {
@@ -7,3 +8,11 @@ export default class BookDetail extends Component {
     );
   }
 }
+
+function mapDispatchToProps(state) {
+  return {
+    book: state.activeBook
+  };
+}
+
+export default connect(mapDispatchToProps)(BBookDetail);
