@@ -1,0 +1,28 @@
+html, body {
+  margin: 20px 0px;
+}
+
+.container.reset {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+td, th {
+  vertical-align: middle !important;
+  text-align: center !important;
+}
+
+svg {
+  height: 150px;
+}
+
+td:first-of-type, td:first-of-type > div {
+  height: 200px;
+  width: 250px;
+}
