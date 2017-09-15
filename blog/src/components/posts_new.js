@@ -7,8 +7,12 @@ class PostsNew extends Component {
     return (
       <div className="form-group">
         <label>{field.label}</label>
-        <input className="form-control" type="text" {...field.input} />
-      {field.meta.error}
+        <input
+          className="form-control"
+          type="text"
+          {...field.input}
+        />
+        {field.meta.touched ? field.meta.error : ''}
       </div>
     );
   }
