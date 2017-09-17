@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchPost } from '../actions';
+import { Link } from 'react-router-dom';
 
 class PostsShow extends Component {
   componentDidMount() {
     //we just want to fetch the particular id in url, not a lists of posts
     //match the id in the url implemented by Route
     // this.props.match.params.id;
-    const { id } = this.props.match.params;
-    this.props.fetchPost(id);
+    if (!this.props.post) {
+      const { id } = this.props.match.params;
+      this.props.fetchPost(id);
+    }
   }
 
   render() {
@@ -22,6 +25,7 @@ class PostsShow extends Component {
 
     return (
       <div>
+        <Link to="/">Back To Index</Link>
         <h3>{post.title}</h3>
         <h6>Categories: {post.categories}</h6>
         <p>{post.content}</p>
