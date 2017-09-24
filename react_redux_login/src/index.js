@@ -7,7 +7,9 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import reducers from './reducers';
 
-import App from './components/App/app';
+import HomePage from './components/HomePage';
+import LoginPage from './components/LoginPage';
+import Register from './components/Register';
 
 const createStoreWithMiddleware = applyMiddleware()(createStore);
 
@@ -16,7 +18,9 @@ ReactDOM.render(
     <BrowserRouter>
       <div>
         <Switch>
-          <Route path="/" component={App} />
+          <Route path="/login" component={LoginPage} />
+          <Route path="/register" component={Register} />
+          <Route path="/" component={HomePage} />
         </Switch>
       </div>
     </BrowserRouter>
