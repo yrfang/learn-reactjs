@@ -9,3 +9,7 @@
 :global(.test) {
   background-color: yellow;
 }
+
+ul li {
+  background-color: pink;
+}

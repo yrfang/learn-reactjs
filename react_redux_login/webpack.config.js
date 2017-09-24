@@ -1,4 +1,4 @@
-var webpack = require('webpack');
+const webpack = require('webpack');
 
 module.exports = {
   entry: [
@@ -20,6 +20,10 @@ module.exports = {
     {
       test: /\.css$/,
       loader: "style-loader!css-loader?modules"
+    },
+    {
+        test: /\.scss$/,
+        loaders: [ 'style', 'css', 'sass' ]
     }],
   },
   resolve: {

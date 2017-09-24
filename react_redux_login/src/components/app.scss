@@ -1,3 +1,13 @@
-.yellow {
+.title {
+  color: red;
+}
+
+:global(.title) {
+  color: blue;
+}
+
+ul {
+  li {
     background-color: yellow;
+  }
 }
