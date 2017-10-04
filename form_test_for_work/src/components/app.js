@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 
+import SignInFormContainer from '../containers/SignInFormContainer';
+
 export default class App extends Component {
   render() {
     return (
-      <div>React simple starter</div>
+      <div>
+        <SignInFormContainer />
+      </div>
     );
   }
 }
